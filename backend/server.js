@@ -5,6 +5,7 @@ const cors = require('cors');
 
 const db = require('./database/db');
 const user = require('./models/user');
+const router = require('./Routes/routes');
 
 const port = process.env.PORT || 3000;
 
@@ -18,6 +19,7 @@ async function startServer() {
 
   app.use(express.json());
   app.use(cors());
+  app.use(router);
 
   app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
