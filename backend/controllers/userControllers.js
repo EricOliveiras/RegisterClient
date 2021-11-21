@@ -28,6 +28,45 @@ class UserController {
       res.status(400).send('There are no registered users!');
     }
   };
+
+  async getUserForId(req, res) {
+    const id = req.params.id
+    const getUserForId = await user.findByPk(id);
+  
+    if(!getUserForId) {
+      res.status(400).send('User not found.');
+    } else {
+      res.status(200).send(getUserForId);
+    };
+  };
+  
+  async changeUser(req, res) {
+    const { id } = req.params;
+    const getUserForId = await user.findByPk(id);
+  
+    if(!getUserForId) {
+      res.status(400).send('User not found.');
+    } else {
+      const userChange = req.body;
+      await user.update(userChange, { where: { id } });
+
+      res.status(200).send(`User updated!`);
+    };
+  };
+  
+  async deleteUser(req, res) {
+    const { id } = req.params;
+    const getUserForId = await user.findByPk(id);
+  
+    if(!getUserForId) {
+      res.status(400).send('User not found.');
+    } else {
+      await user.destroy({ where: { id } });
+  
+      res.status(200).send('User deleted!');
+    };
+  };
+
 };
 
 module.exports = new UserController();
