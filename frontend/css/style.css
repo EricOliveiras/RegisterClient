@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(114, 175, 211), rgb(35, 155, 109));
+}
+
+.box {  
+    color: rgb(35, 155, 109);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 15px;
+    width:25%;
+}
+
+.boxIndex {
+    color: rgb(35, 155, 109);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 15px;
+    width:40%;
+}
+
+fieldset {
+    border: 3px solid rgb(35, 155, 109);
+}
+
+legend {
+    font-weight: bold;
+    color: azure;
+    background-color: rgb(35, 155, 109);
+    border: 1px solid rgb(35, 155, 109);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
+
+.inputBox {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInput {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: .5s;
+}
+
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput {
+    top: -20px;
+    font-size: 12px;
+    color: rgb(142, 230, 196);
+}
+
+.titulo {
+    font-size: 36px;
+    text-align: center;
+    text-shadow: 
+               -1px -1px 0px black, 
+               -1px 1px 0px black,      
+                1px -1px 0px black,    
+                1px 0px 0px black;     
+}
+
+.btn-registro,
+.btn-register,
+.btn-enviar,
+.btn-find,
+.btn-find-all {
+    vertical-align: middle;
+    margin: 10px 0 10px 0;
+    background-color: rgb(35, 155, 109);
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn-register:hover,
+.btn-cadastro:hover,
+.btn-enviar:hover,
+.btn-find:hover,
+.btn-find-all:hover {
+    background-color: rgb(16, 105, 71);
+}
