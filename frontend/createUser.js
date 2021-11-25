@@ -1,6 +1,7 @@
+const api = axios.create();
 
 function createUser() {
-    axios.post('http://localhost:8000/newuser', {
+    api.post('http://localhost:8000/newuser', {
         name: document.getElementById('name').value,
         cpf: document.getElementById('cpf').value,
         email: document.getElementById('email').value,
