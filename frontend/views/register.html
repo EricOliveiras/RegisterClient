@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="../css/style.css"">
     <title>Register Client</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="box">
@@ -15,8 +17,8 @@
                 <legend>Register Client</legend>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
-                    <label for="nome" class="labelInput">Name</label>
+                    <input type="text" name="name" id="name" class="inputUser" required>
+                    <label for="name" class="labelInput">Name</label>
                 </div>
                 <div class="inputBox">
                     <input type="text" name="cpf" id="cpf" class="inputUser" required>
@@ -27,12 +29,14 @@
                     <label for="email" class="labelInput">Email</label>
                 </div>
                 <div class="inputBox">
-                    <input type="tel" name="tel" id="tel" class="inputUser" required>
+                    <input type="tel" name="tel" id="fone" class="inputUser" required>
                     <label for="tel" class="labelInput">Fone</label>
                 </div>
                 <input type="submit" name="submit" class="btn-enviar" value="Cadastrar">
             </fieldset>
         </form>
     </div>
+
+<script src="../createUser.js"></script>
 </body>
 </html> 
